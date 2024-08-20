@@ -1,7 +1,18 @@
 #-----------------------
 
 def new_game():
-    pass
+    guesses = []
+    correct_guesses = 0
+    question_num = 1
+    
+    
+    for key in questions:
+        print("----------------")
+        print(key)
+        for i in options[question_num-1]:
+            print(i)
+        guess = input("Enter(A,B,C, or D): ").lowe()
+        question_num+=1
 #-----------------------
 def check_answer():
     pass
@@ -26,3 +37,5 @@ options = [
     ["A. Lonely Island", "B. Smosh", "C. Monty Python", "D. SNL"],
     ["A. True", "B. False", "C. sometimes", "D. what's Earth?"]
 ]
+
+new_game()
