@@ -11,11 +11,18 @@ def new_game():
         print(key)
         for i in options[question_num-1]:
             print(i)
-        guess = input("Enter(A,B,C, or D): ").lowe()
+        guess = input("Enter(A,B,C, or D): ").upper()
+        guesses.append(guess)
+        check_answer(questions.get(key), guess)
         question_num+=1
 #-----------------------
-def check_answer():
-    pass
+def check_answer(answer, guess):
+    if answer == guess:
+        print("CORRECT!")
+        return 1
+    else:
+        print("WRONG!")
+        return 0
 #-----------------------
 def display_score():
     pass
